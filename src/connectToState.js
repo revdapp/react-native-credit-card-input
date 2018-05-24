@@ -43,11 +43,11 @@ export default function connectToState(CreditCardInput) {
       },
     };
 
-    constructor() {
-      super();
+    constructor(props) {
+      super(props);
       this.state = {
         focused: "",
-        values: {},
+        values: props.values || {},
         status: {},
       };
     }
